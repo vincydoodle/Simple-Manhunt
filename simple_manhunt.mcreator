@@ -1,0 +1,260 @@
+{
+  "mod_elements": [
+    {
+      "name": "Manhunt",
+      "type": "command",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "manhunt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simplemanhunt/command/ManhuntCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "StartManhunt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "start_manhunt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "hunted",
+            "type": "entity"
+          },
+          {
+            "name": "hunters",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/procedures/StartManhuntProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "WherePorcendure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "where_porcendure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/procedures/WherePorcendureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Where",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "where",
+      "metadata": {
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/command/WhereCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Time",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time",
+      "metadata": {
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/client/screens/TimeOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTimerTime",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_timer_time",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/procedures/GetTimerTimeProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GlobalTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "global_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/procedures/GlobalTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "StopManhunt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_manhunt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/procedures/StopManhuntProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "TimeDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_display_overlay_ingame",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/procedures/TimeDisplayOverlayIngameProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "OnPlayerDeath",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_player_death",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/sudonano/simplemanhunt/procedures/OnPlayerDeathProcedure.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Hunted",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "where_cooldown",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "where_ticks",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "Hunting",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ticks",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.simple_manhunt.time.label_000000": "00:00:00"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/com/sudonano/simplemanhunt/network/SimpleManhuntModVariables.java",
+      "src/main/java/com/sudonano/simplemanhunt/SimpleManhuntMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "simple_manhunt",
+    "modName": "Simple Manhunt",
+    "version": "1.0.1",
+    "description": "A very simple manhunt mod",
+    "author": "Vincent Bradford",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "com.sudonano.simplemanhunt"
+  },
+  "mcreatorVersion": 202500228610
+}
